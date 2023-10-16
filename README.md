@@ -49,21 +49,26 @@ sudo apt-get install docker-ce
 sudo yum install docker-ce
 ```
 
+## Construindo a Imagem Docker
 
-Agora que você tem o Docker e o WSL instalados, você pode executar o comando Docker fornecido.
+Primeiro, você precisa construir a imagem Docker usando o seguinte comando:
 
-## Executando o Comando Docker
+```bash
+docker build -t clp .
+```
 
-O comando Docker que você mencionou:
+Isso criará uma imagem chamada "clp" com base no Dockerfile no diretório atual (representado pelo ponto "."). Certifique-se de ter o Dockerfile no mesmo diretório em que você executa o comando "docker build".
+
+## Executando o Contêiner Docker
+
+Agora que você construiu a imagem, você pode executar o contêiner Docker com o seguinte comando:
 
 ```bash
 docker run -d -v ${PWD}/resultados:/resultados clp
 ```
 
-Isso irá executar um contêiner Docker baseado na imagem chamada "clp" em segundo plano. O contêiner compartilhará uma pasta local chamada "resultados" com o contêiner em "/resultados".
+Isso iniciará um contêiner Docker em segundo plano com base na imagem "clp" que você acabou de construir. O contêiner compartilhará uma pasta local chamada "resultados" com o contêiner em "/resultados".
 
-Lembre-se de que você deve substituir "clp" pelo nome da imagem do contêiner que deseja executar e garantir que a imagem esteja disponível localmente ou em um registro de contêiner (como Docker Hub).
+Lembre-se de que você deve substituir "clp" pelo nome da imagem do contêiner que você construiu. Certifique-se de estar no diretório onde deseja criar a pasta "resultados" ou ajuste o caminho de montagem de acordo com o local desejado.
 
-Certifique-se de estar no diretório onde deseja criar a pasta "resultados" ou ajuste o caminho de montagem de acordo com o local desejado.
-
-Execute o comando no terminal WSL para iniciar o contêiner. Você agora tem o Docker e o WSL configurados e pode usar contêineres para isolar suas aplicações e ambientes de desenvolvimento.
+Execute o comando no terminal WSL para iniciar o contêiner. Agora, você tem o Docker e o WSL configurados e pode usar contêineres para isolar suas aplicações e ambientes de desenvolvimento.
