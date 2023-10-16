@@ -1,4 +1,4 @@
-# Guia de Uso do Docker e WSL para Executar o Comando
+# Guia de Uso e instalação da Aplicação CLP-OPCUA
 
 Neste guia, vamos explicar como executar o comando Docker e, antes disso, como instalar o Docker e o Windows Subsystem for Linux (WSL) no seu sistema.
 
