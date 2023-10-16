@@ -2,6 +2,25 @@
 
 Neste guia, vamos explicar como executar o comando Docker e, antes disso, como instalar o Docker e o Windows Subsystem for Linux (WSL) no seu sistema.
 
+
+## Instalando o Windows Subsystem for Linux (WSL)
+
+O Windows Subsystem for Linux (WSL) permite que você execute distribuições Linux em um ambiente Windows. Para instalá-lo, siga as etapas abaixo:
+
+1. Abra o PowerShell ou o Prompt de Comando como administrador.
+
+2. Execute o seguinte comando para habilitar o recurso WSL:
+
+```bash
+wsl --install
+```
+
+3. Reinicie o computador quando solicitado.
+
+4. Após a reinicialização, abra a Microsoft Store e procure por uma distribuição Linux de sua escolha, como o Ubuntu. Baixe e instale a distribuição.
+
+5. Siga as instruções na tela para criar uma conta de usuário e senha.
+
 ## Instalando o Docker
 
 O Docker é uma plataforma que permite empacotar, distribuir e executar aplicativos em contêineres. Para instalar o Docker no seu sistema, siga as etapas abaixo:
@@ -30,29 +49,6 @@ sudo apt-get install docker-ce
 sudo yum install docker-ce
 ```
 
-#### Arch Linux:
-
-```bash
-sudo pacman -S docker
-```
-
-## Instalando o Windows Subsystem for Linux (WSL)
-
-O Windows Subsystem for Linux (WSL) permite que você execute distribuições Linux em um ambiente Windows. Para instalá-lo, siga as etapas abaixo:
-
-1. Abra o PowerShell ou o Prompt de Comando como administrador.
-
-2. Execute o seguinte comando para habilitar o recurso WSL:
-
-```bash
-wsl --install
-```
-
-3. Reinicie o computador quando solicitado.
-
-4. Após a reinicialização, abra a Microsoft Store e procure por uma distribuição Linux de sua escolha, como o Ubuntu. Baixe e instale a distribuição.
-
-5. Siga as instruções na tela para criar uma conta de usuário e senha.
 
 Agora que você tem o Docker e o WSL instalados, você pode executar o comando Docker fornecido.
 
@@ -61,12 +57,12 @@ Agora que você tem o Docker e o WSL instalados, você pode executar o comando D
 O comando Docker que você mencionou:
 
 ```bash
-docker run -d -v ${PWD}/resultados:/resultados meu-container-python
+docker run -d -v ${PWD}/resultados:/resultados clp
 ```
 
-Isso irá executar um contêiner Docker baseado na imagem chamada "meu-container-python" em segundo plano. O contêiner compartilhará uma pasta local chamada "resultados" com o contêiner em "/resultados".
+Isso irá executar um contêiner Docker baseado na imagem chamada "clp" em segundo plano. O contêiner compartilhará uma pasta local chamada "resultados" com o contêiner em "/resultados".
 
-Lembre-se de que você deve substituir "meu-container-python" pelo nome da imagem do contêiner que deseja executar e garantir que a imagem esteja disponível localmente ou em um registro de contêiner (como Docker Hub).
+Lembre-se de que você deve substituir "clp" pelo nome da imagem do contêiner que deseja executar e garantir que a imagem esteja disponível localmente ou em um registro de contêiner (como Docker Hub).
 
 Certifique-se de estar no diretório onde deseja criar a pasta "resultados" ou ajuste o caminho de montagem de acordo com o local desejado.
 
