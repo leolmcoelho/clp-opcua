@@ -1,6 +1,6 @@
 {
     "host": "opc.tcp://192.200.2.5:4840",
-    "delay": 0.5,
+    "delay": 1,
     "BASE_NAME": "ns=4;s=|var|ecomatDisplay/7\"/Touch.Application.GVL_OPC",
     "PATH": "resultados",
     "EXPORT":"xlsx",

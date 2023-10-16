@@ -1,0 +1,1 @@
+python control_CLP.py && echo "python copy_table.py"
