@@ -36,7 +36,7 @@ WORKDIR /
 
 # Copie o arquivo requirements.txt para o contêiner
 COPY requirements.txt .
-COPY teste.py .
+
 
 # Instale as dependências do Python
 RUN pip install -r requirements.txt

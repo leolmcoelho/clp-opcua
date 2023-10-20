@@ -28,7 +28,7 @@ def get_node_value(name):
 
 def get_all_data():
     data = {}
-    for tag in TAGS:
+    for i, tag in enumerate(TAGS):
         var_node = cliente.get_node(f'{BASE}.{tag}')
         value = var_node.get_value()
         data[tag] = value
