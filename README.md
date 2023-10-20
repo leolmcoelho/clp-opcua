@@ -64,7 +64,7 @@ Isso criará uma imagem chamada "clp" com base no Dockerfile no diretório atual
 Agora que você construiu a imagem, você pode executar o contêiner Docker com o seguinte comando:
 
 ```bash
-docker run -d -v ${PWD}/resultados:/resultados clp
+docker run -d --restart=always -v  ${PWD}/resultados:/resultados clp
 ```
 
 Isso iniciará um contêiner Docker em segundo plano com base na imagem "clp" que você acabou de construir. O contêiner compartilhará uma pasta local chamada "resultados" com o contêiner em "/resultados".
